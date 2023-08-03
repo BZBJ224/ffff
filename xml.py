@@ -36,7 +36,7 @@ def analyze_atominfo(atominfo_xml):
 
 #<<<<<<<<<<<< modify by ycx 2023.08.03 
     for ii in atominfo_xml.find("array").find("set"):
-        types.append(uniq_ele.index(ii.findall("c")[0].text.strip()))
+        types.append(uniq_ele.index(ii.findall("c")[0].text.strip()) + 1)
 #<<<<<<<<<<<< end 
 
     return uniq_ele, types
